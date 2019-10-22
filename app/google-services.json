@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "788642076108",
+    "firebase_url": "https://kabodapp.firebaseio.com",
+    "project_id": "kabodapp",
+    "storage_bucket": "kabodapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788642076108:android:d13b66f1098a339c66b969",
+        "android_client_info": {
+          "package_name": "com.charlesadebolaministries.kabodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788642076108-1tscqh47rif4emudu3u981rnn5g7186o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.charlesadebolaministries.kabodapp",
+            "certificate_hash": "1c8ce672005bc14ad1174a7b450babde59818cd5"
+          }
+        },
+        {
+          "client_id": "788642076108-qlldv01ubh0u1p4mgj9c6a97328j2bgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnGEB_dhDMG6PVC1RRcGqF1_bEedhOrGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788642076108-qlldv01ubh0u1p4mgj9c6a97328j2bgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

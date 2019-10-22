@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/grid_1"
+    android:gravity="end">
+
+    <TextView
+        android:id="@+id/messageTV"
+        style="@style/ChatBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/chat_standard_size"
+        android:background="@drawable/chat_current_message_bg_rounded"
+        android:fontFamily="@font/poppins"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/grid_1"
+        android:text="@string/chat_test_message"
+        android:textColor="@color/black" />
+
+</LinearLayout>

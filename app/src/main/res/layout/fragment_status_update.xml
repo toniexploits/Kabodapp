@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.statusupdate.StatusUpdateFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/update_status_background">
+
+        <Button
+            android:id="@+id/sendStatusButton"
+            style="@style/SendButton"
+            android:layout_width="@dimen/send_width"
+            android:layout_height="@dimen/send_height"
+            android:layout_margin="@dimen/grid_1"
+            android:fontFamily="@font/poppins"
+            android:text="@string/update_status"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/statusET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/grid_1"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:hint="@string/status_message"
+            android:maxHeight="@dimen/send_max_height"
+            android:minHeight="@dimen/send_min_height"
+            android:padding="@dimen/grid_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sendStatusButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/statusIV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toTopOf="@+id/statusET"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/progressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/colorLightGrey"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

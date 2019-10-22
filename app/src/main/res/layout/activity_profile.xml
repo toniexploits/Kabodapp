@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/grid_3"
+            android:layout_marginBottom="@dimen/grid_3">
+
+            <ImageView
+                android:id="@+id/photoIV"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="@dimen/standard_height_small"
+                android:layout_marginBottom="@dimen/grid_3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_icon" />
+            <TextView
+                android:id="@+id/phoneNumberText"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/photoIV"
+                android:paddingBottom="@dimen/grid_2"
+                android:text="Phone: "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phoneNumberText"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/hint_name"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTIL"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/hint_email"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/occupationTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailTIL"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/occupationeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/occupation"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/maritalStatusTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/occupationTIL"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/maritalStatusET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Marital Status"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textDOB"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maritalStatusTIL"
+                android:paddingBottom="@dimen/grid_2"
+                android:text="@string/date_of_birth"
+                android:textSize="16sp" />
+
+            <DatePicker
+                android:id="@+id/birthDatePicker"
+                style="@android:style/Widget.Holo.DatePicker"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textDOB"
+                android:calendarViewShown="false"
+                android:headerBackground="@color/colorPrimary"
+                android:paddingBottom="@dimen/grid_2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityStateTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/birthDatePicker"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cityStateET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/city_state"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/updateButton"
+                style="@style/StandardButton"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="@dimen/standard_height"
+                android:layout_below="@id/cityStateTIL"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="@dimen/grid_3"
+                android:fontFamily="@font/poppins_medium"
+                android:onClick="onUpdate"
+                android:text="@string/button_update"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/deleteAccountButton"
+                style="@style/StandardButton"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="@dimen/standard_height"
+                android:layout_below="@id/updateButton"
+                android:fontFamily="@font/poppins_medium"
+                android:onClick="onDelete"
+                android:text="@string/button_delete"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorLightGrey"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

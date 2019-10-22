@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.charlesadebolaministries.kabodapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <activity
+        android:id="@+id/nav_profile"
+        android:name="com.charlesadebolaministries.kabodapp.profile.ProfileActivity"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/activity_profile"/>
+
+<!--    <fragment-->
+<!--        android:id="@+id/nav_chat"-->
+<!--        android:name="com.example.kabodapp.ui.chat.ChatsFragment"-->
+<!--        android:label="@string/menu_chat"-->
+<!--        tools:layout="@layout/fragment_chat_home" />-->
+
+    <activity
+        android:id="@+id/nav_chat"
+        android:name="com.charlesadebolaministries.kabodapp.ui.chat.ChatActivity"
+        android:label="@string/menu_chat"
+        tools:layout="@layout/activity_chat" />
+
+    <fragment
+        android:id="@+id/nav_update_status"
+        android:name="com.charlesadebolaministries.kabodapp.ui.statusupdate.StatusUpdateFragment"
+        android:label="@string/menu_update_status"
+        tools:layout="@layout/fragment_status_update" />
+
+    <fragment
+        android:id="@+id/nav_view_status"
+        android:name="com.charlesadebolaministries.kabodapp.ui.status.StatusListFragment"
+        android:label="@string/menu_view_status"
+        tools:layout="@layout/fragment_status_list" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.charlesadebolaministries.kabodapp.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.charlesadebolaministries.kabodapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.charlesadebolaministries.kabodapp.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.charlesadebolaministries.kabodapp.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.charlesadebolaministries.kabodapp.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+
+</navigation>
